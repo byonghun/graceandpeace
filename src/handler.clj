@@ -13,6 +13,9 @@
 (selmer.parser/cache-off!)
 (selmer.parser/set-resource-path! (clojure.java.io/resource "react"))
 
+(defn store-and-redirect [request]
+  (redirect (str "/?r=" (:uri request))))
+
 (defn show-ui [request]
   (let [response (render-file "index.html" {})]
     {:status 200
@@ -22,6 +25,7 @@
 (defroutes gp-routes
   (GET "/app.js" []
        (redirect "http://localhost:8080/build/app.js"))
+  (GET "/home" [] store-and-redirect)
   (GET "/" [] show-ui)
   (route/resources "/")
   (route/not-found "Page not found"))

@@ -4,7 +4,8 @@ var parentDir = path.join(__dirname, '../');
 
 module.exports = {
   entry: [
-    path.join(parentDir, 'index.jsx')
+    path.join(parentDir, 'index.jsx'),
+    'webpack-dev-server/client?http://localhost:8080',
   ],
   output: {
     path: parentDir + '/build',
