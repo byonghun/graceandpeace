@@ -1,9 +1,14 @@
-{"presets": ["react"],
+{"presets": ["react", "es2015", "stage-0"],
  "plugins": [
+   "react-hot-loader/babel",
    ["extensible-destructuring", {"mode": "optout", "impl": "safe"}],
    ["auto-import", {
      "declarations": [
-       {"path": "react", "default": "React", "members": ["Component"]}
+       {
+         "path": "react", "default": "React", "members": ["Component"]
+       }, {
+         "path": "lodash", "default": "_", "members": ["trimStart"]
+       }
      ]
    }]
  ]
