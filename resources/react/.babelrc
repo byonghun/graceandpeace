@@ -1,0 +1,10 @@
+{"presets": ["react"],
+ "plugins": [
+   ["extensible-destructuring", {"mode": "optout", "impl": "safe"}],
+   ["auto-import", {
+     "declarations": [
+       {"path": "react", "default": "React", "members": ["Component"]}
+     ]
+   }]
+ ]
+}
