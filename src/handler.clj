@@ -3,17 +3,25 @@
              [run-server]]
             [ring.middleware.format :refer [wrap-restful-format]]
             [ring.middleware.reload :refer [wrap-reload]]
+            [ring.util.response :refer [redirect]]
+            [selmer.parser :refer :all]
             [compojure
              [core :refer :all]
              [route :as route]]
             [clj-time.core :as t]))
 
+(selmer.parser/cache-off!)
+(selmer.parser/set-resource-path! (clojure.java.io/resource "react"))
+
 (defn show-ui [request]
-  {:status 200
-   :headers {}
-   :body (str (t/now))})
+  (let [response (render-file "index.html" {})]
+    {:status 200
+     :headers {}
+     :body response}))
 
 (defroutes gp-routes
+  (GET "/app.js" []
+       (redirect "http://localhost:8080/build/app.js"))
   (GET "/" [] show-ui)
   (route/resources "/")
   (route/not-found "Page not found"))

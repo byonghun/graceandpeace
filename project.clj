@@ -6,5 +6,6 @@
                  [ring-middleware-format "0.7.2"]
                  [http-kit "2.2.0"]
                  [ring "1.6.3"]
+                 [selmer "1.11.0"]
                  [compojure "1.6.0"]]
   :main handler)
