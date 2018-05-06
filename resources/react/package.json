@@ -17,7 +17,8 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js",
-    "clean": "rm build/app.js"
+    "clean": "rm build/app.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.jsx --recursive ./test"
   },
   "dependencies": {
     "@material-ui/icons": "^1.0.0-beta.43",
@@ -26,7 +27,9 @@
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-native": "^0.55.3",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
     "webpack": "^4.6.0",
     "webpack-dev-server": "^3.1.3"
   },
