@@ -21,16 +21,20 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.jsx --recursive ./test"
   },
   "dependencies": {
+    "@material-ui/core": "^1.0.0",
     "@material-ui/icons": "^1.0.0-beta.43",
+    "axios": "^0.18.0",
     "extensible-runtime": "^4.1.0",
-    "material-ui": "^1.0.0-beta.43",
     "nuka-carousel": "^4.1.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-jinke-music-player": "^3.3.1",
     "react-native": "^0.55.3",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
+    "redux-form": "^7.3.0",
+    "redux-thunk": "^2.2.0",
     "webpack": "^4.6.0",
     "webpack-dev-server": "^3.1.3"
   },
