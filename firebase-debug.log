@@ -1,0 +1,49 @@
+[debug] [2018-05-16T20:31:12.996Z] ----------------------------------------------------------------------
+[debug] [2018-05-16T20:31:12.998Z] Command:       /usr/local/Cellar/node/10.0.0/bin/node /usr/local/bin/firebase serve
+[debug] [2018-05-16T20:31:12.998Z] CLI Version:   3.18.4
+[debug] [2018-05-16T20:31:12.998Z] Platform:      darwin
+[debug] [2018-05-16T20:31:12.998Z] Node Version:  v10.0.0
+[debug] [2018-05-16T20:31:12.999Z] Time:          Wed May 16 2018 13:31:12 GMT-0700 (PDT)
+[debug] [2018-05-16T20:31:12.999Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-16T20:31:13.010Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-16T20:31:13.010Z] > authorizing via signed-in user
+[debug] [2018-05-16T20:31:13.012Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-16T20:31:13.012Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/K7N6QzIlLryQxGoBZthPxN3CpphuWFUI3Uvv6Q6f3Z8',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed May 16 2018 13:31:13 GMT-0700 (PDT)
+[debug] [2018-05-16T20:31:13.233Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-16T20:31:13.240Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/grace-peace  
+  
+ Wed May 16 2018 13:31:13 GMT-0700 (PDT)
+[debug] [2018-05-16T20:31:13.913Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-16T20:31:13.914Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/grace-peace/tokens  
+  
+ Wed May 16 2018 13:31:13 GMT-0700 (PDT)
+[debug] [2018-05-16T20:31:14.481Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-16T20:31:14.482Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/grace-peace  
+  
+ Wed May 16 2018 13:31:14 GMT-0700 (PDT)
+[debug] [2018-05-16T20:31:15.013Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/optimis/Amazon/gp'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-16T20:31:15.746Z] Fetching environment
+[debug] [2018-05-16T20:31:15.748Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/813644019221:getServerAppConfig  
+  
+ Wed May 16 2018 13:31:15 GMT-0700 (PDT)
+[debug] [2018-05-16T20:31:15.748Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/813644019221/clients/_:getWebAppConfig  
+  
+ Wed May 16 2018 13:31:15 GMT-0700 (PDT)
+[debug] [2018-05-16T20:31:16.379Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-16T20:31:16.380Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-16T20:31:16.568Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ''
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-16T20:31:17.412Z] Parsing function triggers
