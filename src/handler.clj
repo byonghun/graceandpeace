@@ -8,10 +8,21 @@
             [compojure
              [core :refer :all]
              [route :as route]]
-            [clj-time.core :as t]))
+            [clj-time.core :as t]
+            [taika.core :as taika]
+            [taika.auth :as taika-auth])
+  (:import java.util.UUID))
 
 (selmer.parser/cache-off!)
 (selmer.parser/set-resource-path! (clojure.java.io/resource "react"))
+
+;; (def user-auth-token
+;;   (let [token-generator (taika-auth/token-generator "SECRET-KEY")
+;;         admin? false]
+;;     (taika-auth/create-token token-generator auth-data admin?)))
+
+(defn post-sermon [req]
+  (clojure.pprint/pprint req))
 
 (defn store-and-redirect [request]
   (redirect (str "/?r=" (:uri request))))
@@ -26,6 +37,8 @@
   (GET "/app.js" []
        (redirect "http://localhost:8080/build/app.js"))
   (GET "/home" [] store-and-redirect)
+  (GET "/sermons" [] store-and-redirect)
+  (POST "/sermons" [] post-sermon)
   (GET "/" [] show-ui)
   (route/resources "/")
   (route/not-found "Page not found"))
