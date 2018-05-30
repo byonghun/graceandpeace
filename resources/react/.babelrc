@@ -1,5 +1,7 @@
 {"presets": ["react", "es2015", "stage-0"],
  "plugins": [
+   "transform-decorators-legacy",
+   "transform-decorators",
    ["extensible-destructuring", {"mode": "optout", "impl": "safe"}],
    ["auto-import", {
      "declarations": [
